@@ -8,6 +8,8 @@
 # Script modified from these wonderful people:
 # https://github.com/dastorm/volume-notification-dunst/blob/master/volume.sh
 # https://gist.github.com/sebastiencs/5d7227f388d93374cebdf72e783fbd6a
+# requires Faba icon package to be installed
+
 
 function get_volume {
   amixer get Master | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1
@@ -18,8 +20,8 @@ function is_mute {
 }
 
 function send_notification {
-  iconSound="audio-subwoofer-testing"
-  iconMuted="audio-subwoofer"
+  iconSound="/usr/share/icons/Faba/48x48/notifications/notification-audio-volume-medium.svg"
+  iconMuted="/usr/share/icons/Faba/48x48/notifications/notification-audio-volume-muted.svg"
   if is_mute ; then
     dunstify -i $iconMuted -r 2593 -u normal "mute"
   else
