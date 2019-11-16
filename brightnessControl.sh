@@ -13,7 +13,7 @@ function get_brightness {
 }
 
 function send_notification {
-  icon="computer"
+  icon="/usr/share/icons/Faba/48x48/notifications/notification-display-brightness.svg"
   brightness=$(get_brightness)
   # Make the bar with the special character ─ (it's not dash -)
   # https://en.wikipedia.org/wiki/Box-drawing_character
