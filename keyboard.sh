@@ -2,4 +2,4 @@
 setxkbmap -option compose:rwin
 setxkbmap -option ctrl:nocaps
 setxkbmap -option compose:prsc
-xcape -e 'Caps_Lock=Escape'
+xcape -e 'Control_L=Escape'
