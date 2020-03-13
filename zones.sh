@@ -27,11 +27,10 @@ done
 
 shift $((OPTIND - 1))
 
-echo "Timezones"
-TZ=Asia/Tokyo date --date="$DATE"
-TZ=Europe/Amsterdam date --date="$DATE"
-TZ=Europe/London date --date="$DATE"
-TZ=UTC date --date="$DATE"
-TZ=America/Denver date --date="$DATE"
-TZ=America/Los_Angeles date --date="$DATE"
+echo -n "Tokyo:		" && TZ=Asia/Tokyo date --date="$DATE"
+echo -n "Berlin/Vienna:	" && TZ=Europe/Amsterdam date --date="$DATE"
+echo -n "London:		" && TZ=Europe/London date --date="$DATE"
+echo -n "UTC:		" && TZ=UTC date --date="$DATE"
+echo -n "Utah:		" && TZ=America/Denver date --date="$DATE"
+echo -n "California:	" && TZ=America/Los_Angeles date --date="$DATE"
 
